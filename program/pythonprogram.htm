@@ -57,3 +57,36 @@ Re-type new password:
 Adding password for user todd
 
 sudo systemctl restart httpd
+
+# ?????
+sat3310@fedora:~$ sudo tail -n 30 /var/log/httpd/error_log
+[Wed Jun 03 19:26:19.021464 2026] [core:notice] [pid 3494:tid 3494] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jun 03 19:26:19.024610 2026] [:warn] [pid 3496:tid 3496] ./mod_dnssd.c: No services found to register
+[Wed Jun 03 19:32:37.013790 2026] [mpm_event:notice] [pid 3494:tid 3494] AH00492: caught SIGWINCH, shutting down gracefully
+[Wed Jun 03 19:32:38.757406 2026] [suexec:notice] [pid 3786:tid 3786] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4283:143b:1938:4476%ens192. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 03 19:32:40.007476 2026] [lbmethod_heartbeat:notice] [pid 3786:tid 3786] AH02282: No slotmem from mod_heartmonitor
+[Wed Jun 03 19:32:40.016768 2026] [:warn] [pid 3788:tid 3788] ./mod_dnssd.c: No services found to register
+[Wed Jun 03 19:32:40.036174 2026] [mpm_event:notice] [pid 3786:tid 3786] AH00489: Apache/2.4.58 (Fedora Linux) configured -- resuming normal operations
+[Wed Jun 03 19:32:40.036599 2026] [core:notice] [pid 3786:tid 3786] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jun 03 19:37:45.539169 2026] [mpm_event:notice] [pid 3786:tid 3786] AH00492: caught SIGWINCH, shutting down gracefully
+[Wed Jun 03 19:37:48.007213 2026] [suexec:notice] [pid 4019:tid 4019] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4283:143b:1938:4476%ens192. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 03 19:37:49.507249 2026] [lbmethod_heartbeat:notice] [pid 4019:tid 4019] AH02282: No slotmem from mod_heartmonitor
+[Wed Jun 03 19:37:49.522322 2026] [:warn] [pid 4021:tid 4021] ./mod_dnssd.c: No services found to register
+[Wed Jun 03 19:37:49.522599 2026] [mpm_event:notice] [pid 4019:tid 4019] AH00489: Apache/2.4.58 (Fedora Linux) configured -- resuming normal operations
+[Wed Jun 03 19:37:49.522624 2026] [core:notice] [pid 4019:tid 4019] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jun 03 19:40:49.340621 2026] [mpm_event:notice] [pid 4019:tid 4019] AH00492: caught SIGWINCH, shutting down gracefully
+[Wed Jun 03 19:40:52.007312 2026] [suexec:notice] [pid 4271:tid 4271] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4283:143b:1938:4476%ens192. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 03 19:40:53.507181 2026] [lbmethod_heartbeat:notice] [pid 4271:tid 4271] AH02282: No slotmem from mod_heartmonitor
+[Wed Jun 03 19:40:53.515754 2026] [:warn] [pid 4273:tid 4273] ./mod_dnssd.c: No services found to register
+[Wed Jun 03 19:40:53.526570 2026] [mpm_event:notice] [pid 4271:tid 4271] AH00489: Apache/2.4.58 (Fedora Linux) configured -- resuming normal operations
+[Wed Jun 03 19:40:53.527015 2026] [core:notice] [pid 4271:tid 4271] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jun 03 19:46:43.422012 2026] [mpm_event:notice] [pid 4271:tid 4271] AH00492: caught SIGWINCH, shutting down gracefully
+[Wed Jun 03 19:46:46.007290 2026] [suexec:notice] [pid 4530:tid 4530] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::4283:143b:1938:4476%ens192. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 03 19:46:47.507281 2026] [lbmethod_heartbeat:notice] [pid 4530:tid 4530] AH02282: No slotmem from mod_heartmonitor
+[Wed Jun 03 19:46:47.519785 2026] [:warn] [pid 4532:tid 4532] ./mod_dnssd.c: No services found to register
+[Wed Jun 03 19:46:47.525109 2026] [mpm_event:notice] [pid 4530:tid 4530] AH00489: Apache/2.4.58 (Fedora Linux) configured -- resuming normal operations
+[Wed Jun 03 19:46:47.525145 2026] [core:notice] [pid 4530:tid 4530] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
