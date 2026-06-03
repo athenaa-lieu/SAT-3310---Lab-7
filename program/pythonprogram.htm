@@ -90,3 +90,19 @@ AH00558: httpd: Could not reliably determine the server's fully qualified domain
 [Wed Jun 03 19:46:47.519785 2026] [:warn] [pid 4532:tid 4532] ./mod_dnssd.c: No services found to register
 [Wed Jun 03 19:46:47.525109 2026] [mpm_event:notice] [pid 4530:tid 4530] AH00489: Apache/2.4.58 (Fedora Linux) configured -- resuming normal operations
 [Wed Jun 03 19:46:47.525145 2026] [core:notice] [pid 4530:tid 4530] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+
+# cat /var/www/html/protected/.htaccess
+
+AuthType Basic
+AuthName "Protected Area. Authentication required!"
+AuthUserFile /var/www/html/protected/.htpasswd
+Require valid-user
+
+# sudo nano /etc/httpd/conf.d/protected.conf
+
+<Directory "/var/www/html/protected">
+    AllowOverride All
+    Require all granted
+</Directory>
+
+# sudo systemctl restart httpd
