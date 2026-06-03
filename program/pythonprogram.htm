@@ -106,3 +106,18 @@ Require valid-user
 </Directory>
 
 # sudo systemctl restart httpd
+
+# sudo nano /etc/httpd/conf.d/protected.conf
+
+<Directory "/var/www/html/protected">
+    AuthType Basic
+    AuthName "Protected Area. Authentication required!"
+    AuthUserFile /var/www/html/protected/.htpasswd
+    Require valid-user
+</Directory>
+
+# ls -la /var/www/html/protected/.htpasswd
+
+# sudo htpasswd -c /var/www/html/protected/.htpasswd todd
+
+#sudo systemctl restart httpd
