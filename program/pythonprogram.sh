@@ -37,6 +37,7 @@ http://127.0.0.1/
 You may need to jump ahead to section 2.11 and disable SELinux.
 
 2.4 SS Take a screenshot of your website
+
 2.5 Security – htaccess
 Create a new directory:
 $ sudo mkdir -p /var/www/html/protected
