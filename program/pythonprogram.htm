@@ -9,3 +9,51 @@
 </html>
 
 # sudo chown root:root /var/www/html/index.html
+
+# sudo nano /var/www/html/protected/index.html
+
+<html>
+    <p>Welcome authenticated user!</p>
+</html>
+
+# sudo chown root:root /var/www/html/protected/index.html
+
+# sudo nano /etc/httpd/conf.d/protected.conf
+
+<Directory /var/www/html/protected>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Order allow,deny
+    allow from all
+</Directory>
+
+# sudo chown root:root /etc/httpd/conf.d/protected.conf
+
+# grep auth_basic /etc/httpd/conf.modules.d/00-base.conf
+
+# sudo nano /var/www/html/protected/.htaccess
+
+AuthName "Protected Area. Authentication required!"
+AuthUserFile /var/www/html/protected/.htpasswd
+AuthType Basic
+Require valid-user
+
+# sudo nano /etc/sysconfig/selinux
+
+SELINUX=enforcing
+
+SELINUX=disabled
+
+# sudo reboot
+
+# sudo systemctl restart httpd
+
+# sudo htpasswd -c /var/www/html/protected/.htpasswd todd
+
+password
+
+New password:
+Re-type new password:
+Adding password for user todd
+
+sudo systemctl restart httpd
