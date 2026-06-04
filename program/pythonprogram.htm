@@ -138,3 +138,10 @@ Require valid-user
 # sudo systemctl restart httpd
 
 # curl -I http://127.0.0.1/protected/
+
+sat3310@fedora:~$ curl -I http://127.0.0.1/protected/
+HTTP/1.1 401 Unauthorized
+Date: Thu, 04 Jun 2026 00:07:24 GMT
+Server: Apache/2.4.58 (Fedora Linux)
+WWW-Authenticate: Basic realm="Protected Area"
+Content-Type: text/html; charset=iso-8859-1
