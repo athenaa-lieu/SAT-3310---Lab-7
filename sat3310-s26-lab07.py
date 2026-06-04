@@ -2,7 +2,7 @@
 
 # SAT 3310 - Lab 7
 # Created by Athena Lieu (xlieu@mtu.edu)
-# Date: June 1st, 2026
+# Date: June 3rd, 2026
 # Comments: This script performs a brute-force attack on a protected website using HTTP Basic Authentication.
 # It reads common usernames and passwords from files and attempts to access the website with each combination until it finds valid credentials or exhausts all possibilities.
 # The script also includes debug statements to provide feedback on the process.
